@@ -8,7 +8,7 @@ class Comment():
 class Submission():
     def __init__(self, reddit, postID):
         self.submissionID = postID
-        self.submission = reddit.submission(id=postID)
+        self.submission = reddit.praw.submission(id=postID)
         self.title = self.submission.title
         self.comments = []
 
@@ -16,7 +16,7 @@ class Submission():
         self.comments = list(self.submission.comments)
 
     def printSubmission(self):
-        getTopComments()
+        self.getTopComments()
         print(self.title)
-        print(self.comments)
+        # print(self.comments)
 
