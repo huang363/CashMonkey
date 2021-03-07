@@ -1,4 +1,4 @@
-name: reddit
+name: cashmonkey
 channels:
   - conda-forge
   - defaults
